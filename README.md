@@ -1,4 +1,4 @@
 # docker-templates
 My docker-templates
   
-  paulpoco-delugevpn
+  delugevpn-flexget

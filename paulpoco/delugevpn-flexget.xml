@@ -15,6 +15,7 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
 </Description>
   <Registry>https://hub.docker.com/r/paulpoco/arch-delugevpn/</Registry>
   <Repository>paulpoco/arch-delugevpn</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support> 
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
   <Environment>

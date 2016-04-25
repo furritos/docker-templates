@@ -11,7 +11,6 @@ This Docker includes OpenVPN to ensure a secure and private connection to the In
 [b]/data[/b] This is where deluge will store data downloaded, watched folder, and archived torrents.[br][br]&#13;
 [b][span style='color: #E80000;']Notes[/span][/b][br]&#13;
 Best best is to get it working on the original DelugeVPN before wanting one with Flexget. Support Forum coming soon.
-PIA, AirVPN and custom VPN providers please go here http://lime-technology.com/forum/index.php?topic=45812.msg437678#msg437678[br]&#13;
 IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you need to specify you LAN network, using CIDR notation for the mask, a subnet mask of 255.255.255.0 would equate to CIDR /24, 255.255.0.0 would equate to CIDR /16.&#13;
 </Description>
   <Registry>https://hub.docker.com/r/paulpoco/arch-delugevpn/</Registry>

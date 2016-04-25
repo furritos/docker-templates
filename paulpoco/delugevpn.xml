@@ -111,4 +111,7 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
   <Banner>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/deluge-banner.png</Banner>
   <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/deluge-icon.png</Icon>
   <ExtraParams></ExtraParams>
+<Beta>False</Beta>
+<Category>Downloaders: Network:Web Network:DNS Network:Proxy Network:Management Tools:</Category>
+<Date>2016-04-24</Date> 
 </Container>

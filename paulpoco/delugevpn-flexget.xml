@@ -10,8 +10,9 @@ This Docker includes OpenVPN to ensure a secure and private connection to the In
 [b]/config[/b] This is where deluge will store it's configuration file, database and logs.[br]&#13;
 [b]/data[/b] This is where deluge will store data downloaded, watched folder, and archived torrents.[br][br]&#13;
 [b][span style='color: #E80000;']Notes[/span][/b][br]&#13;
-Best best is to get it working on the original DelugeVPN before wanting one with Flexget. Support Forum coming soon.
+Best best is to get it working on the original DelugeVPN before wanting one with Flexget.
 IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you need to specify you LAN network, using CIDR notation for the mask, a subnet mask of 255.255.255.0 would equate to CIDR /24, 255.255.0.0 would equate to CIDR /16.&#13;
+          - Also so far the Flexget webui only seems to work from the unRAID machine in a VM.
 </Description>
   <Registry>https://hub.docker.com/r/paulpoco/arch-delugevpn/</Registry>
   <Repository>paulpoco/arch-delugevpn</Repository>
@@ -45,7 +46,7 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
     </Variable>
     <Variable>
       <Name>VPN_PROV</Name>
-      <Value>pia | air | custom</Value>
+      <Value>pia|airvpn|custom</Value>
     </Variable>
     <Variable>
       <Name>ENABLE_PRIVOXY</Name>

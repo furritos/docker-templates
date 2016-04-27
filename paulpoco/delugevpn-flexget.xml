@@ -2,7 +2,7 @@
 <Container>
 <Beta>False</Beta>
 <Category>Downloaders: Network:Web Network:Proxy Network:Management Tools:</Category>
-<Date>2016-04-26</Date> 
+<Date>2016-04-27</Date> 
   <Name>delugevpn-flexget</Name>
   <Description>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.[br]&#13;
 This Docker includes OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites, to use Privoxy please point your application at "host ip:8118"[br][br]&#13;
@@ -12,7 +12,10 @@ This Docker includes OpenVPN to ensure a secure and private connection to the In
 [b][span style='color: #E80000;']Notes[/span][/b][br]&#13;
 Best best is to get it working on the original DelugeVPN before wanting one with Flexget.
 IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you need to specify you LAN network, using CIDR notation for the mask, a subnet mask of 255.255.255.0 would equate to CIDR /24, 255.255.0.0 would equate to CIDR /16.&#13;
-          - Also so far the Flexget webui only seems to work from the unRAID machine in a VM.
+          - Flexget-webui now works on LAN network.  Set FLEXGET_WEBUI_PASSWORD in the section below PGID.
+          - FLEXGET_WEBUI_PASSWORD has to be at least 8 characters.  If left blank it delfaults to flexpass.
+          - For Deluge Clients to connect over the LAN you need to check allow remote connections.
+          - ContainerDir of /home/nobody/.flexget has to not be changed, it is hard coded in the setup.
 </Description>
   <Registry>https://hub.docker.com/r/paulpoco/arch-delugevpn/</Registry>
   <Repository>paulpoco/arch-delugevpn</Repository>
@@ -67,6 +70,10 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
     <Variable>
       <Name>PGID</Name>
       <Value>100</Value>
+    </Variable>
+    <Variable>
+      <Name>FLEXGET_WEBUI_PASSWORD</Name>
+      <Value>password_you_want_to_set</Value>
     </Variable>
   </Environment>
   <Networking>

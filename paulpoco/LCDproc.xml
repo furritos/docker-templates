@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+<Beta>True</Beta>
+<Category>Tools:</Category>
+<Date>2016-04-27</Date>
+<Changes>
+  April 27, 2016 Initial Release - concept not working yet
+</Changes>
+<Project>
+  http://lcdproc.omnipotent.net/
+</Project>
+  <Name>lcdproc</Name>
+  <Description>LCDproc is a piece of open source software that displays real-time system information from your Linux/*BSD box on a LCD. The server supports several serial and USB devices from Matrix Orbital and CrystalFontz as well as some devices connected to the LPT port: HD44780, T6963, SED1520 and SED1330. Various clients are available that display things like CPU load, system load, memory usage, uptime, and a lot more.
+</Description>
+  <Registry>https://hub.docker.com/r/paulpoco/tba/</Registry>
+  <Repository>paulpoco/tba</Repository>
+  <Support>tba</Support> 
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Environment>
+    <Variable>
+      <Name>DRIVER</Name>
+      <Value>lis|CFontz|imon|etc</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>lcdproc</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Banner>http://image.prntscr.com/image/d1cc2b49c64844e79bab367d44702433.png</Banner>
+  <Icon>http://image.prntscr.com/image/7d8ac7edc84046f6880c3c7dd1b4e40a.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>

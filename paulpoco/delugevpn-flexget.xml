@@ -11,7 +11,6 @@
                  Add some echo comments for Flexget during container startup
 </Changes>
 <Project>
-  http://deluge-torrent.org/
   http://flexget.com/
 </Project>
   <Name>delugevpn-flexget</Name>

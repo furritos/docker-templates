@@ -2,7 +2,7 @@
 <Container>
 <Beta>False</Beta>
 <Category>Downloaders: Network:Web Network:Proxy Network:Management Tools:</Category>
-<Date>2016-04-28</Date> 
+<Date>2016-05-07</Date> 
 <Changes>
   April 24, 2016 Initial Release - added nano editor
   April 25, 2016 Fix bugs
@@ -13,6 +13,7 @@
                  pacman pkg-config gcc
                  pip2 install --upgrade --force-reinstall requests[security] #this stops insecure warnings in flexget
                  yes|pacman -Rs gcc
+  May 7, 2016    Re-built to upgrade Flexget from 2.0.7 to 2.0.14
 </Changes>
 <Project>
   http://flexget.com/

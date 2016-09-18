@@ -55,7 +55,7 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
     </Variable>
     <Variable>
       <Name>VPN_REMOTE</Name>
-      <Value></Value>
+      <Value>IP address of VPN providers found in OVPN file</Value>
     </Variable>
     <Variable>
       <Name>VPN_PORT</Name>

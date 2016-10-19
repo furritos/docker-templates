@@ -9,19 +9,19 @@
 <Project>
   http://flexget.com/
 </Project>
-  <Name>flexget</Name>
+  <Name>arch-flexget</Name>
   <Description>FlexGet is a multipurpose automation tool for content like torrents, nzbs, podcasts, comics, series, movies, etc. It can use different kinds of sources like RSS-feeds, html pages, csv files, search engines and there are even plugins for sites that do not provide any kind of useful feeds. There are numerous plugins that allow utilizing FlexGet in interesting ways and more are being added continuously. FlexGet is extremely useful in conjunction with applications which have watch directory support or provide interface for external utilities like FlexGet.
 [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
-[b]/config[/b] This is where deluge will store it's configuration file, database and logs.[br]&#13;
-[b]/Media[/b] This is where felxget will store data downloaded, watched folder, and archived torrents.[br][br]&#13;
+[b]/config[/b] This is where flexget will store it's configuration file, database and logs.[br]&#13;
+[b]/Media[/b] This is where flexget will store data downloaded, watched folder, and archived torrents.[br][br]&#13;
 [b][span style='color: #E80000;']Notes[/span][/b][br]&#13;
 
 IMPORTANT - Flexget-webui now works on LAN network.  Set FLEXGET_WEBUI_PASSWORD in the section below PGID.
           - FLEXGET_WEBUI_PASSWORD has to be at least 8 characters.  If left blank it delfaults to flexpass.
           - ContainerDir of /home/nobody/.flexget has to not be changed, it is hard coded in the setup.
 </Description>
-  <Registry>https://hub.docker.com/r/paulpoco/arch-delugevpn/</Registry>
-  <Repository>paulpoco/arch-delugevpn</Repository>
+  <Registry>https://hub.docker.com/r/paulpoco/arch-flexget/</Registry>
+  <Repository>paulpoco/arch-flexget</Repository>
   <Support>tba</Support> 
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
@@ -55,12 +55,12 @@ IMPORTANT - Flexget-webui now works on LAN network.  Set FLEXGET_WEBUI_PASSWORD 
   </Networking>
   <Data>
     <Volume>
-      <HostDir>flexget</HostDir>
+      <HostDir>/mnt/cache/appdata/arch-flexget/</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>downloads</HostDir>
+      <HostDir>/mnt/user/Media/</HostDir>
       <ContainerDir>/Media</ContainerDir>
       <Mode>rw</Mode>
     </Volume>

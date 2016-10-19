@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+<Beta>True</Beta>
+<Category>Downloaders: Network:Web Network:Management Tools:</Category>
+<Date>2016-10-18</Date> 
+<Changes>
+  October 18, 2016 Initial Release
+</Changes>
+<Project>
+  http://flexget.com/
+</Project>
+  <Name>flexget</Name>
+  <Description>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.[br]&#13;
+This Docker includes OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites, to use Privoxy please point your application at "host ip:8118"[br][br]&#13;
+[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
+[b]/config[/b] This is where deluge will store it's configuration file, database and logs.[br]&#13;
+[b]/Media[/b] This is where deluge will store data downloaded, watched folder, and archived torrents.[br][br]&#13;
+[b][span style='color: #E80000;']Notes[/span][/b][br]&#13;
+Best best is to get it working on the original DelugeVPN before wanting one with Flexget.
+IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you need to specify you LAN network, using CIDR notation for the mask, a subnet mask of 255.255.255.0 would equate to CIDR /24, 255.255.0.0 would equate to CIDR /16.&#13;
+          - Flexget-webui now works on LAN network.  Set FLEXGET_WEBUI_PASSWORD in the section below PGID.
+          - FLEXGET_WEBUI_PASSWORD has to be at least 8 characters.  If left blank it delfaults to flexpass.
+          - For Deluge Clients to connect over the LAN you need to check allow remote connections.
+          - ContainerDir of /home/nobody/.flexget has to not be changed, it is hard coded in the setup.
+</Description>
+  <Registry>https://hub.docker.com/r/paulpoco/arch-delugevpn/</Registry>
+  <Repository>paulpoco/arch-delugevpn</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support> 
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Environment>
+    <Variable>
+      <Name>VPN_ENABLED</Name>
+      <Value>yes</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_USER</Name>
+      <Value>user</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PASS</Name>
+      <Value>pass</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_REMOTE</Name>
+      <Value>IP address of VPN providers found in OVPN file</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PORT</Name>
+      <Value>port</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PROTOCOL</Name>
+      <Value>udp</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PROV</Name>
+      <Value>pia|airvpn|custom</Value>
+    </Variable>
+    <Variable>
+      <Name>ENABLE_PRIVOXY</Name>
+      <Value>yes</Value>
+    </Variable>
+    <Variable>
+      <Name>LAN_NETWORK</Name>
+      <Value>192.168.1.0/24</Value>
+    </Variable>
+    <Variable>
+      <Name>DEBUG</Name>
+      <Value>false</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+    <Variable>
+      <Name>FLEXGET_WEBUI_PASSWORD</Name>
+      <Value>password_you_want_to_set</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8112</HostPort>
+        <ContainerPort>8112</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>58846</HostPort>
+        <ContainerPort>58846</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8118</HostPort>
+        <ContainerPort>8118</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3539</HostPort>
+        <ContainerPort>3539</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>delugevpn</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>downloads</HostDir>
+      <ContainerDir>/Media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>flexget/</HostDir>
+      <ContainerDir>/home/nobody/.flexget</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8112]/</WebUI>
+  <Banner>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-banner.jpg</Banner>
+  <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>

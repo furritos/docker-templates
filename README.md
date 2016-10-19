@@ -2,3 +2,4 @@
 My docker-templates
   
   delugevpn-flexget
+  flexget

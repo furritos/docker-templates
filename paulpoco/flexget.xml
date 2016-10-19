@@ -61,7 +61,7 @@ IMPORTANT - Flexget-webui now works on LAN network.  Set FLEXGET_WEBUI_PASSWORD 
     </Volume>
     <Volume>
       <HostDir>/mnt/cache/appdata/arch-flexget/</HostDir>
-      <ContainerDir>/home/nobody/.flexget</ContainerDir>
+      <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>

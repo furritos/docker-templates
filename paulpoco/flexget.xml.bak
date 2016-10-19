@@ -71,7 +71,7 @@ IMPORTANT - Flexget-webui now works on LAN network.  Set FLEXGET_WEBUI_PASSWORD 
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:3539]/</WebUI>
-  <Banner>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/</Banner>
+  <Banner>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/flexgetbanner.png</Banner>
   <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/</Icon>
   <ExtraParams></ExtraParams>
 </Container>

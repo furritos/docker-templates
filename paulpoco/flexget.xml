@@ -24,7 +24,7 @@ IMPORTANT - Flexget-webui now works on LAN network.  Set FLEXGET_WEBUI_PASSWORD 
   <Repository>paulpoco/arch-flexget</Repository>
   <Support>tba</Support> 
   <BindTime>true</BindTime>
-  <Privileged>true</Privileged>
+  <Privileged>false</Privileged>
   <Environment>
     <Variable>
       <Name>DEBUG</Name>

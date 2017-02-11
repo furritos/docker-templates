@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-<Beta>False</Beta>
+<Beta>True</Beta>
 <Category>Downloaders: Network:Web Network:Proxy Network:Management Tools:</Category>
-<Date>2016-09-18</Date> 
+<Date>2017-02-11</Date> 
 <Changes>
   April 24, 2016 Initial Release - added nano editor
   April 25, 2016 Fix bugs
@@ -17,6 +17,8 @@
   Sept 17, 2016  Rebuilt to upgrade Flexget From 2.0.14 to 2.3.28
   Sept 18, 2016  Synced up with changes from Binhex and changed template to have VPN_REMOTE more clear.
                  VPN_REMOTE = the IP address in the OVPN file, only tested with AirVPN
+  Feb 11, 2017   Refactored to line up with Binhex's current DelugeVPN
+                 Newest version of Flexget
 </Changes>
 <Project>
   http://flexget.com/
@@ -47,11 +49,11 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
     </Variable>
     <Variable>
       <Name>VPN_USER</Name>
-      <Value>user</Value>
+      <Value>vpn username</Value>
     </Variable>
     <Variable>
       <Name>VPN_PASS</Name>
-      <Value>pass</Value>
+      <Value>vpn password</Value>
     </Variable>
     <Variable>
       <Name>VPN_REMOTE</Name>
@@ -59,27 +61,43 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
     </Variable>
     <Variable>
       <Name>VPN_PORT</Name>
-      <Value>port</Value>
+      <Value>Port of VPN providers found in OVPN file</Value>
     </Variable>
     <Variable>
       <Name>VPN_PROTOCOL</Name>
-      <Value>udp</Value>
+      <Value>udptcp</Value>
     </Variable>
+    <Variable>
+      <Name>VPN_DEVICE_TYPE</Name>
+      <Value>tun|tap</Value>
+    </Variable>    
     <Variable>
       <Name>VPN_PROV</Name>
       <Value>pia|airvpn|custom</Value>
     </Variable>
     <Variable>
+      <Name>VPN_OPTIONS</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>STRONG_CERTS</Name>
+      <Value>no|yes</Value>
+    </Variable>    
+    <Variable>
       <Name>ENABLE_PRIVOXY</Name>
-      <Value>yes</Value>
+      <Value>no|yes</Value>
     </Variable>
     <Variable>
       <Name>LAN_NETWORK</Name>
       <Value>192.168.1.0/24</Value>
     </Variable>
     <Variable>
+      <Name>NAME_SERVERS</Name>
+      <Value>8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177</Value>
+    </Variable>    
+    <Variable>
       <Name>DEBUG</Name>
-      <Value>false</Value>
+      <Value>false|tru</Value>
     </Variable>
     <Variable>
       <Name>PUID</Name>
@@ -123,6 +141,11 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
     <Volume>
       <HostDir>delugevpn</HostDir>
       <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/cache/delugevpn/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>

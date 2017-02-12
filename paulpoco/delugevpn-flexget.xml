@@ -19,7 +19,7 @@
                  VPN_REMOTE = the IP address in the OVPN file, only tested with AirVPN
   Feb 11, 2017   Refactored to line up with Binhex's current DelugeVPN
                  Newest version of Flexget
-  Feb 12, 2017   Missing /mnt/user/cache/delugevpn /config paths
+  Feb 12, 2017   Missing /mnt/cache/appdata/delugevpn /config paths
 </Changes>
 <Project>
   http://flexget.com/
@@ -66,7 +66,7 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
     </Variable>
     <Variable>
       <Name>VPN_PROTOCOL</Name>
-      <Value>udptcp</Value>
+      <Value>udp|tcp</Value>
     </Variable>
     <Variable>
       <Name>VPN_DEVICE_TYPE</Name>
@@ -140,22 +140,22 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/cache/delugevpn</HostDir>
+      <HostDir>/mnt/cache/appdata/delugevpn</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/cache/delugevpn/data</HostDir>
+      <HostDir>/mnt/cache/appdata/delugevpn/data</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>downloads</HostDir>
+      <HostDir>/mnt/user/Media</HostDir>
       <ContainerDir>/Media</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>flexget/</HostDir>
+      <HostDir>/mnt/cache/appdata/flexget</HostDir>
       <ContainerDir>/home/nobody/.flexget</ContainerDir>
       <Mode>rw</Mode>
     </Volume>

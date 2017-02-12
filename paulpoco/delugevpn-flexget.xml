@@ -2,7 +2,7 @@
 <Container>
 <Beta>True</Beta>
 <Category>Downloaders: Network:Web Network:Proxy Network:Management Tools:</Category>
-<Date>2017-02-11</Date> 
+<Date>2017-02-12</Date> 
 <Changes>
   April 24, 2016 Initial Release - added nano editor
   April 25, 2016 Fix bugs
@@ -19,6 +19,7 @@
                  VPN_REMOTE = the IP address in the OVPN file, only tested with AirVPN
   Feb 11, 2017   Refactored to line up with Binhex's current DelugeVPN
                  Newest version of Flexget
+  Feb 12, 2017   Missing /mnt/user/cache/delugevpn /config paths
 </Changes>
 <Project>
   http://flexget.com/
@@ -139,7 +140,7 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
   </Networking>
   <Data>
     <Volume>
-      <HostDir>delugevpn</HostDir>
+      <HostDir>/mnt/user/cache/delugevpn</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>

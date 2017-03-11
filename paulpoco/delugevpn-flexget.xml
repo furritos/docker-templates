@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Container>
+<Containers>
 <Beta>True</Beta>
 <Category>Downloaders: Network:Web Network:Proxy Network:Management Tools:</Category>
 <Date>2017-02-12</Date> 
@@ -20,6 +20,7 @@
   Feb 11, 2017   Refactored to line up with Binhex's current DelugeVPN
                  Newest version of Flexget
   Feb 12, 2017   Missing /mnt/cache/appdata/delugevpn /config paths
+  Mar 10, 2017   Trying to get up to date with Binhex and PIA working
 </Changes>
 <Project>
   http://flexget.com/
@@ -43,6 +44,41 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
   <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support> 
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8112</HostPort>
+        <ContainerPort>8112</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>58846</HostPort>
+        <ContainerPort>58846</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>58946</HostPort>
+        <ContainerPort>58946</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>58946</HostPort>
+        <ContainerPort>58946</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>    
+      <Port>
+        <HostPort>8118</HostPort>
+        <ContainerPort>8118</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3539</HostPort>
+        <ContainerPort>3539</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
   <Environment>
     <Variable>
       <Name>VPN_ENABLED</Name>
@@ -98,7 +134,11 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
     </Variable>    
     <Variable>
       <Name>DEBUG</Name>
-      <Value>false|tru</Value>
+      <Value>false|true</Value>
+    </Variable>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
     </Variable>
     <Variable>
       <Name>PUID</Name>
@@ -113,31 +153,6 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
       <Value>password_you_want_to_set</Value>
     </Variable>
   </Environment>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>8112</HostPort>
-        <ContainerPort>8112</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>58846</HostPort>
-        <ContainerPort>58846</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>8118</HostPort>
-        <ContainerPort>8118</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>3539</HostPort>
-        <ContainerPort>3539</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
   <Data>
     <Volume>
       <HostDir>/mnt/cache/appdata/delugevpn</HostDir>
@@ -164,4 +179,4 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
   <Banner>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-banner.jpg</Banner>
   <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-icon.png</Icon>
   <ExtraParams></ExtraParams>
-</Container>
+</Containers>

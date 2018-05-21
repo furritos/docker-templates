@@ -2,7 +2,7 @@
 <Containers>
 <Beta>True</Beta>
 <Category>Downloaders: Network:Web Network:Proxy Network:Management Tools:</Category>
-<Date>2017-03-10</Date> 
+<Date>2018=05-20</Date> 
 <Changes>
   April 24, 2016 Initial Release - added nano editor
   April 25, 2016 Fix bugs
@@ -155,12 +155,12 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/delugevpn</HostDir>
+      <HostDir>/mnt/cache/appdata/delugevpndev</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/delugevpn/data</HostDir>
+      <HostDir>/mnt/cache/appdata/delugevpndev/data</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -170,7 +170,7 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/flexget</HostDir>
+      <HostDir>/mnt/cache/appdata/flexgetdev</HostDir>
       <ContainerDir>/home/nobody/.flexget</ContainerDir>
       <Mode>rw</Mode>
     </Volume>

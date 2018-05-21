@@ -40,7 +40,7 @@ IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you n
           - ContainerDir of /home/nobody/.flexget has to not be changed, it is hard coded in the setup.
 </Description>
   <Registry>https://hub.docker.com/r/paulpoco/arch-delugevpn-dev/</Registry>
-  <Repository>paulpoco/arch-delugevpn/tree/dev</Repository>
+  <Repository>paulpoco/arch-delugevpn:dev</Repository>
   <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support> 
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>

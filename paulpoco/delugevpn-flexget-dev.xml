@@ -2,7 +2,7 @@
 <Containers>
 <Beta>True</Beta>
 <Category>Downloaders: Network:Web Network:Proxy Network:Management Tools:</Category>
-<Date>2018=05-20</Date> 
+<Date>2018-06-30</Date> 
 <Changes>
   April 24, 2016 Initial Release - added nano editor
   April 25, 2016 Fix bugs
@@ -21,6 +21,8 @@
                  Newest version of Flexget
   Feb 12, 2017   Missing /mnt/cache/appdata/delugevpn /config paths
   Mar 10, 2017   Trying to get up to date with Binhex and PIA working
+  May 20, 2018   Trying to get up to date
+  Jun 30, 2018   Update 2 commits from Binhex
 </Changes>
 <Project>
   http://flexget.com/

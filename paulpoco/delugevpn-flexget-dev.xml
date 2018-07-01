@@ -153,11 +153,6 @@
          <Mode>rw</Mode>
       </Volume>
       <Volume>
-         <HostDir>/mnt/cache/appdata/delugevpn-flexget-dev/data</HostDir>
-         <ContainerDir>/data</ContainerDir>
-         <Mode>rw</Mode>
-      </Volume>
-      <Volume>
          <HostDir>/mnt/user/Media</HostDir>
          <ContainerDir>/Media</ContainerDir>
          <Mode>rw</Mode>

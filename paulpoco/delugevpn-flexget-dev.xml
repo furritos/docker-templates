@@ -42,7 +42,7 @@
    <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support>
    <Registry>https://hub.docker.com/r/paulpoco/arch-delugevpn-dev:dev/</Registry>
    <GitHub>https://github.com/paulpoco/arch-delugevpn:dev</GitHub>
-   <Repository>paulpoco/arch-delugevpn:dev</Repository>
+   <Repository>paulpoco/arch-delugevpn-dev:dev</Repository>
    <BindTime>true</BindTime>
    <Privileged>true</Privileged>
    <Networking>

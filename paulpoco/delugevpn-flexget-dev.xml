@@ -98,14 +98,6 @@
          <Value>pia|airvpn|custom</Value>
       </Variable>
       <Variable>
-         <Name>VPN_PROTOCOL</Name>
-         <Value>udp|tcp</Value>
-      </Variable>
-      <Variable>
-         <Name>VPN_DEVICE_TYPE</Name>
-         <Value>tun|tap</Value>
-      </Variable>
-      <Variable>
          <Name>VPN_OPTIONS</Name>
          <Value />
       </Variable>

@@ -2,7 +2,7 @@
 <Containers>
    <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/delugevpn-flexget-dev.xml</TemplateURL>
    <Beta>True</Beta>
-   <Category>Downloaders: Network:Web Network:Proxy Network:Management Tools:</Category>
+   <Category>Downloaders:</Category>
    <Date>2018-06-30</Date>
    <Changes>April 24, 2016 Initial Release - added nano editor
     April 25, 2016 Fix bugs
@@ -22,7 +22,8 @@
     Feb 12, 2017   Missing /mnt/cache/appdata/delugevpn /config paths
     Mar 10, 2017   Trying to get up to date with Binhex and PIA working
     May 20, 2018   Trying to get up to date
-    Jun 30, 2018   Update 2 commits from Binhex &amp; add dev tage to dockerhub info</Changes>
+    Jun 30, 2018   Update 2 commits from Binhex &amp; add dev tage to dockerhub info
+    July 8, 2019   Attempted to re-sync with Binhex and Deluge 2.x and Flexget 2.21.10</Changes>
    <Project>http://flexget.com/</Project>
    <Name>delugevpn-flexget-dev</Name>
    <Description>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.[br]&#xD;
@@ -123,8 +124,16 @@
       </Variable>
       <Variable>
          <Name>NAME_SERVERS</Name>
-         <Value>209.222.18.222,37.235.1.174,1.1.1.1,8.8.8.8,209.222.18.218,37.235.1.177,1.0.0.1,8.8.4.4</Value>
+         <Value>209.222.18.222,84.200.69.80,37.235.1.174,1.1.1.1,209.222.18.218,37.235.1.177,84.200.70.40,1.0.0.1</Value>
       </Variable>
+     <Variable>
+      <Name>DELUGE_DAEMON_LOG_LEVEL</Name>
+      <Value>info</Value>
+    </Variable>
+    <Variable>
+      <Name>DELUGE_WEB_LOG_LEVEL</Name>
+      <Value>info</Value>
+    </Variable>     
       <Variable>
          <Name>DEBUG</Name>
          <Value>false|true</Value>

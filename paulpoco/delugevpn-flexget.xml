@@ -3,7 +3,7 @@
    <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/delugevpn-flexget.xml</TemplateURL>
    <Beta>True</Beta>
    <Category>Downloaders:</Category>
-   <Date>2019-12-04</Date>
+   <Date>2020-05-17</Date>
    <Changes>April 24, 2016 Initial Release - added nano editor
     April 25, 2016 Fix bugs
     April 26, 2016 Make Flexget-Webui password able to be set in the container settings
@@ -26,7 +26,8 @@
     July 8, 2019   Attempted to re-sync with Binhex and Deluge 2.x and Flexget 2.21.10
     July 10, 2019  Add more from Binhex, add a pip install of deluge-client
      Nov 30, 2019  Add more from Binhex up to Oct 16
-     Dec 4, 20019  Try and fix template that had dev left in</Changes>
+     Dec 4, 2019  Try and fix template that had dev left in
+     May 17, 2020  Update to current Binhex version</Changes>
    <Project>http://flexget.com/</Project>
    <Name>delugevpn-flexget</Name>
    <Description>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.[br]&#xD;

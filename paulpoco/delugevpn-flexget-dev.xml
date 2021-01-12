@@ -173,7 +173,7 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/flexget-dev</HostDir>
+      <HostDir>/mnt/user/appdata/flexget-dev</HostDir>
       <ContainerDir>/home/nobody/.flexget</ContainerDir>
       <Mode>rw</Mode>
     </Volume>

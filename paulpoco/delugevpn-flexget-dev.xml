@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Containers>
-   <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/delugevpn-flexget-dev.xml</TemplateURL>
-   <Beta>True</Beta>
-   <Category>Downloaders:</Category>
-   <Date>2021-01-10</Date>
-   <Changes>April 24, 2016 Initial Release - added nano editor
+  <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/delugevpn-flexget-dev.xml</TemplateURL>
+  <Beta>True</Beta>
+  <Category>Downloaders:</Category>
+  <Date>2021-01-10</Date>
+  <Changes>April 24, 2016 Initial Release - added nano editor
     April 25, 2016 Fix bugs
     April 26, 2016 Make Flexget-Webui password able to be set in the container settings
                  Now you do not need to enter the conatiner and set the password
@@ -25,13 +25,14 @@
     Jun 30, 2018   Update 2 commits from Binhex &amp; add dev tage to dockerhub info
     July 8, 2019   Attempted to re-sync with Binhex and Deluge 2.x and Flexget 2.21.10
     July 10, 2019  Add more from Binhex, add a pip install of deluge-client
-     Nov 30, 2019  Add more from Binhex up to Oct 16
-     May 17, 2020  Brought up to date with Binhex newest updates
-     Jan 10, 2021  Brought up to date with Binhex newest updates, hopefully it works
+    Nov 30, 2019  Add more from Binhex up to Oct 16
+    May 17, 2020  Brought up to date with Binhex newest updates
+    Jan 10, 2021  Brought up to date with Binhex newest updates, hopefully it works
+    Jan 11, 2021  More fixes
      DONT UPGRADE UNTIL I CHANGE THIS MESSAGE</Changes>
-   <Project>http://flexget.com/</Project>
-   <Name>delugevpn-flexget-dev</Name>
-   <Description>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.[br]&#xD;
+  <Project>http://flexget.com/</Project>
+  <Name>delugevpn-flexget-dev</Name>
+  <Description>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.[br]&#xD;
     This Docker includes OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites, to use Privoxy please point your application at "host ip:8118"[br][br]&#xD;
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
     [b]/config[/b] This is where deluge will store it's configuration file, database and logs.[br]&#xD;
@@ -43,49 +44,49 @@
               - FLEXGET_WEBUI_PASSWORD has to be at least 8 characters.  If left blank it delfaults to flexpass.
               - For Deluge Clients to connect over the LAN you need to check allow remote connections.
               - ContainerDir of /home/nobody/.flexget has to not be changed, it is hard coded in the setup.</Description>
-   <Overview>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.[br]
+  <Overview>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.[br]
     This Docker includes Flexget &amp; OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites, to use Privoxy please point your application at "host ip:8118"</Overview>
-   <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support>
-   <Registry>https://hub.docker.com/r/paulpoco/arch-delugevpn-dev:dev/</Registry>
-   <GitHub>https://github.com/paulpoco/arch-delugevpn:dev</GitHub>
-   <Repository>paulpoco/arch-delugevpn-dev:Dev</Repository>
-   <BindTime>true</BindTime>
-   <Privileged>true</Privileged>
-   <Networking>
-      <Mode>bridge</Mode>
-      <Publish>
-         <Port>
-            <HostPort>8112</HostPort>
-            <ContainerPort>8112</ContainerPort>
-            <Protocol>tcp</Protocol>
-         </Port>
-         <Port>
-            <HostPort>58846</HostPort>
-            <ContainerPort>58846</ContainerPort>
-            <Protocol>tcp</Protocol>
-         </Port>
-         <Port>
-            <HostPort>58946</HostPort>
-            <ContainerPort>58946</ContainerPort>
-            <Protocol>tcp</Protocol>
-         </Port>
-         <Port>
-            <HostPort>58946</HostPort>
-            <ContainerPort>58946</ContainerPort>
-            <Protocol>udp</Protocol>
-         </Port>
-         <Port>
-            <HostPort>8118</HostPort>
-            <ContainerPort>8118</ContainerPort>
-            <Protocol>tcp</Protocol>
-         </Port>
-         <Port>
-            <HostPort>3539</HostPort>
-            <ContainerPort>3539</ContainerPort>
-            <Protocol>tcp</Protocol>
-         </Port>
-      </Publish>
-   </Networking>
+  <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support>
+  <Registry>https://hub.docker.com/r/paulpoco/arch-delugevpn-dev:dev/</Registry>
+  <GitHub>https://github.com/paulpoco/arch-delugevpn:dev</GitHub>
+  <Repository>paulpoco/arch-delugevpn-dev:Dev</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8112</HostPort>
+        <ContainerPort>8112</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>58846</HostPort>
+        <ContainerPort>58846</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>58946</HostPort>
+        <ContainerPort>58946</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>58946</HostPort>
+        <ContainerPort>58946</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8118</HostPort>
+        <ContainerPort>8118</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3539</HostPort>
+        <ContainerPort>3539</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
   <Environment>
     <Variable>
       <Name>VPN_ENABLED</Name>
@@ -162,17 +163,17 @@
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/delugevpn-flexget-dev</HostDir>
+      <HostDir>/mnt/user/appdata/delugevpn-flexget-dev</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/Media</HostDir>
-      <ContainerDir>/Media</ContainerDir>
+      <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/flexgetdev</HostDir>
+      <HostDir>/mnt/cache/appdata/flexget-dev</HostDir>
       <ContainerDir>/home/nobody/.flexget</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -180,5 +181,5 @@
   <WebUI>http://[IP]:[PORT:8112]/</WebUI>
   <Banner>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-banner.jpg</Banner>
   <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-icon.png</Icon>
-  <ExtraParams></ExtraParams>
+  <ExtraParams>--sysctl="net.ipv4.conf.all.src_valid_mark=1"</ExtraParams>
 </Containers>

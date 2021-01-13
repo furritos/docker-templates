@@ -3,7 +3,7 @@
   <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/delugevpn-flexget-dev.xml</TemplateURL>
   <Beta>True</Beta>
   <Category>Downloaders:</Category>
-  <Date>2021-01-11</Date>
+  <Date>2021-01-12</Date>
   <Changes>April 24, 2016 Initial Release - added nano editor
     April 25, 2016 Fix bugs
     April 26, 2016 Make Flexget-Webui password able to be set in the container settings
@@ -29,7 +29,8 @@
     May 17, 2020  Brought up to date with Binhex newest updates
     Jan 10, 2021  Brought up to date with Binhex newest updates, hopefully it works
     Jan 11, 2021  More fixes
-     DONT UPGRADE UNTIL I CHANGE THIS MESSAGE</Changes>
+    Jan 12, 2021  Remove Binhex last commit from Dec 28 2020 and it started working
+  </Changes>
   <Project>http://flexget.com/</Project>
   <Name>delugevpn-flexget-dev</Name>
   <Description>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.[br]&#xD;
@@ -41,7 +42,7 @@
     Best best is to get it working on the original DelugeVPN before wanting one with Flexget.
     IMPORTANT - To allow access to the Deluge webui, Privoxy and Deluge deamon you need to specify you LAN network, using CIDR notation for the mask, a subnet mask of 255.255.255.0 would equate to CIDR /24, 255.255.0.0 would equate to CIDR /16.&#xD;
               - Flexget-webui now works on LAN network.  Set FLEXGET_WEBUI_PASSWORD in the section below PGID.
-              - FLEXGET_WEBUI_PASSWORD has to be at least 8 characters.  If left blank it delfaults to flexpass.
+              - FLEXGET_WEBUI_PASSWORD has to be at least 12 characters.  If left blank it delfaults to flexpass1234.
               - For Deluge Clients to connect over the LAN you need to check allow remote connections.
               - ContainerDir of /home/nobody/.flexget has to not be changed, it is hard coded in the setup.</Description>
   <Overview>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.[br]
@@ -102,7 +103,7 @@
     </Variable>
     <Variable>
       <Name>FLEXGET_WEBUI_PASSWORD</Name>
-      <Value>password_you_want_to_set</Value>
+      <Value>password_at_least_12_char_long</Value>
     </Variable>
     <Variable>
       <Name>VPN_PROV</Name>

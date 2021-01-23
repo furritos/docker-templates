@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/burstcoin.xml</TemplateURL>
+  <Beta>True</Beta>
+  <Category>Network:</Category>
+  <Date>2021-01-22</Date>
+  <Changes>
+    January 22, 2016 Initial Release - still in development
+  </Changes>
+  <Project>https://github.com/burst-apps-team/burstcoin</Project>
+  <Name>burstcoin</Name>
+  <Description>
+    Burstcoin Reference Software (Burstcoin Wallet)
+    The world's first HDD-mined cryptocurrency using an energy efficient and fair Proof-of-Capacity (PoC) consensus algorithm.
+    This wallet version is developed and maintained by the Burst Apps Team (BAT). The two supported database backends are
+    H2 (embedded, recommended)
+  </Description>
+  <Overview>
+    Proof of Capacity - ASIC proof / Energy efficient mining
+    No ICO/Airdrops/Premine
+    Turing-complete smart contracts, via BlockTalk
+    Asset Exchange; Digital Goods Store; Crowdfunds, NFTs, games, and more (via smart contracts); and Alias system
+  </Overview>
+  <Support>TBD</Support>
+  <Registry>https://hub.docker.com/r/paulpoco/burstcoin:latest/</Registry>
+  <GitHub>https://github.com/paulpoco/burstcoin</GitHub>
+  <Repository>paulpoco/burstcoin</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8125</HostPort>
+        <ContainerPort>8125</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8123</HostPort>
+        <ContainerPort>8123</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8121</HostPort>
+        <ContainerPort>8121</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/burstcoin/conf</HostDir>
+      <ContainerDir>/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/burstcoin/db</HostDir>
+      <ContainerDir>/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/burstcoin/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8112]/</WebUI>
+  <Banner></Banner>
+  <Icon></Icon>
+  <ExtraParams></ExtraParams>
+</Containers>

@@ -56,7 +56,7 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/burstcoin/db</HostDir>
+      <HostDir>/mnt/user/appdata/burstcoin/db</HostDir>
       <ContainerDir>/db</ContainerDir>
       <Mode>rw</Mode>
     </Volume>

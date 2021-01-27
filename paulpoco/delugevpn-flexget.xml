@@ -3,7 +3,7 @@
    <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/delugevpn-flexget.xml</TemplateURL>
    <Beta>True</Beta>
    <Category>Downloaders:</Category>
-   <Date>2021-01-16</Date>
+   <Date>2021-01-26</Date>
   <Changes>April 24, 2016 Initial Release - added nano editor
     April 25, 2016 Fix bugs
     April 26, 2016 Make Flexget-Webui password able to be set in the container settings
@@ -31,6 +31,7 @@
     Jan 11, 2021  More fixes
     Jan 12, 2021  Remove Binhex last commit from Dec 28 2020 and it started working
     Jan 16, 2021  Merge Dev into Master branch.
+    Jan 26, 2021  Merge Dev into Master branch.
   </Changes>
    <Project>http://flexget.com/</Project>
    <Name>delugevpn-flexget</Name>

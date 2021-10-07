@@ -53,8 +53,8 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/signum-node/db</HostDir>
-      <ContainerDir>/db</ContainerDir>
+      <HostDir>/mnt/user/appdata/signum-node/burst_db</HostDir>
+      <ContainerDir>/burst_db</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>

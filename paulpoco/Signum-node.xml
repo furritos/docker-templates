@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
-  <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/delugevpn-flexget-dev.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/signum-node.xml</TemplateURL>
   <Beta>True</Beta>
   <Category>Crypto Currency:</Category>
   <Date>2021-10-06</Date>

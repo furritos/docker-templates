@@ -9,6 +9,7 @@
   <Project>https://github.com/signum-network/signum-node/</Project>
   <Name>signum-node</Name>
   <Description>
+    https://www.signum.network/
     The world's first HDD-mined cryptocurrency using an energy efficient and fair Proof-of-Commitment (PoC+) consensus algorithm.
     The two supported database backends are:
       H2 (embedded, recommended)

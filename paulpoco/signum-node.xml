@@ -53,12 +53,12 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/signum-node/burst_db</HostDir>
-      <ContainerDir>/burst_db</ContainerDir>
+      <HostDir>/mnt/user/appdata/signum-node/db</HostDir>
+      <ContainerDir>/db</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8125]/classic.html</WebUI>
+  <WebUI>http://[IP]:[PORT:8125]</WebUI>
   <Banner></Banner>
   <Icon>https://raw.githubusercontent.com/signum-network/signum-node/main/resources/images/signum_overlay_logo.ico</Icon>
   <ExtraParams></ExtraParams>

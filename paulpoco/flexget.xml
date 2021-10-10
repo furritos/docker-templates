@@ -3,16 +3,17 @@
   <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/flexget-dev.xml</TemplateURL>
   <Beta>True</Beta>
   <Category>Downloaders:</Category>
-  <Date>2021-10-09</Date>
-  <Changes>October 09, 2021 Initial Release</Changes>
-  <Project>http://flexget.com/</Project>
   <Name>flexget</Name>
-  <Description>FlexGet is a multipurpose automation tool for all of your media</Description>
-  <Overview></Overview>
+  <Description>
+    FlexGet is a multipurpose automation tool for all of your media
+  </Description>
+  <Overview>
+  </Overview>
   <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support>
   <Registry>https://hub.docker.com/r/wiserain/flexget:latest</Registry>
   <GitHub>https://github.com/wiserain/docker-flexget</GitHub>
   <Repository>wiserain/flexget:latest</Repository>
+  <Project>http://flexget.com/</Project>
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
   <Networking>
@@ -52,7 +53,9 @@
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:5050]/</WebUI>
-  <Banner>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-banner.jpg</Banner>
   <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-icon.png</Icon>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
   <ExtraParams>--net=container:binhex-delugevpn</ExtraParams>
 </Containers>

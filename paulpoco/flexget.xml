@@ -54,5 +54,5 @@
   <WebUI>http://[IP]:[PORT:8112]/</WebUI>
   <Banner>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-banner.jpg</Banner>
   <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-icon.png</Icon>
-  <ExtraParams>--net=container:DelugeVPN</ExtraParams>
+  <ExtraParams>--net=container:binhex-delugevpn</ExtraParams>
 </Containers>

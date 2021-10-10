@@ -1,61 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Containers>
-  <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/flexget-dev.xml</TemplateURL>
-  <Beta>True</Beta>
-  <Category>Downloaders:</Category>
+<?xml version="1.0"?>
+<Container version="2">
   <Name>flexget</Name>
-  <Requires>binhex-delugevpn</Requires>
-  <Description>
-    FlexGet is a multipurpose automation tool for all of your media
-    Requires binhex-delugevpn to be installed 1st
-    And do Q24 on the Binhex VPN FAQ
-  </Description>
-  <Overview>
-  </Overview>
-  <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support>
-  <Registry>https://hub.docker.com/r/wiserain/flexget:latest</Registry>
-  <GitHub>https://github.com/wiserain/docker-flexget</GitHub>
   <Repository>wiserain/flexget:latest</Repository>
-  <Project>http://flexget.com/</Project>
-  <BindTime>true</BindTime>
+  <Registry>https://hub.docker.com/r/wiserain/flexget:latest</Registry>
+  <Network>none</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>true</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support>
+  <Project>http://flexget.com/</Project>
+  <Overview>&#xD;
+    FlexGet is a multipurpose automation tool for all of your media&#xD;
+  </Overview>
+  <Category>Downloaders:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/flexget-dev.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-icon.png</Icon>
+  <ExtraParams>--net=container:binhex-delugevpn</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+    FlexGet is a multipurpose automation tool for all of your media&#xD;
+  </Description>
   <Networking>
     <Mode>none</Mode>
+    <Publish/>
   </Networking>
-  <Environment>
-    <Variable>
-      <Name>FG_WEBUI_PASSWD</Name>
-      <Value>password here 16 characters</Value>
-    </Variable>    
-    <Variable>
-      <Name>UMASK</Name>
-      <Value>000</Value>
-    </Variable>
-    <Variable>
-      <Name>PUID</Name>
-      <Value>99</Value>
-    </Variable>
-    <Variable>
-      <Name>PGID</Name>
-      <Value>100</Value>
-    </Variable>
-  </Environment>
   <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/flexget</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
     <Volume>
       <HostDir>/mnt/user/Media</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/flexget</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
-  <WebUI></WebUI>
-  <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-icon.png</Icon>
-  <DonateText></DonateText>
-  <DonateLink></DonateLink>
-  <DonateImg></DonateImg>
-  <ExtraParams>--net=container:binhex-delugevpn</ExtraParams>
-</Containers>
+  <Environment>
+    <Variable>
+      <Value>16 charactor password</Value>
+      <Name>FG_WEBUI_PASSWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Path 2" Target="/data" Default="/mnt/user/Media" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Media</Config>
+  <Config Name="Key 1" Target="FG_WEBUI_PASSWD" Default="16 charactor password" Mode="" Description="Container Variable: FG_WEBUI_PASSWD" Type="Variable" Display="always" Required="false" Mask="false">16 charactor password</Config>
+  <Config Name="Key 2" Target="UMASK" Default="000" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <Config Name="Key 3" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Key 4" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/flexget" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/flexget</Config>
+</Container>

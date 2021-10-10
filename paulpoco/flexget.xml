@@ -21,6 +21,10 @@
   </Networking>
   <Environment>
     <Variable>
+      <Name>FG_WEBUI_PASSWD</Name>
+      <Value>password here</Value>
+    </Variable>    
+    <Variable>
       <Name>UMASK</Name>
       <Value>000</Value>
     </Variable>

@@ -22,7 +22,7 @@
   <Environment>
     <Variable>
       <Name>FG_WEBUI_PASSWD</Name>
-      <Value>password here</Value>
+      <Value>password here 16 characters</Value>
     </Variable>    
     <Variable>
       <Name>UMASK</Name>

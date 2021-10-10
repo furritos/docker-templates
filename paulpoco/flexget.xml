@@ -18,13 +18,6 @@
   <Privileged>true</Privileged>
   <Networking>
     <Mode>none</Mode>
-    <Publish>
-      <Port>
-        <HostPort>5050</HostPort>
-        <ContainerPort>5050</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
   </Networking>
   <Environment>
     <Variable>
@@ -52,7 +45,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:5050]/</WebUI>
+  <WebUI></WebUI>
   <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-icon.png</Icon>
   <DonateText></DonateText>
   <DonateLink></DonateLink>

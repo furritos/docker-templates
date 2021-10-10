@@ -16,7 +16,7 @@
   <Category>Downloaders:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/flexget-dev.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-icon.png</Icon>
+  <Icon>https://github.com/paulpoco/docker-templates/raw/master/paulpoco/images/flexgeticon.png</Icon>
   <ExtraParams>--net=container:binhex-delugevpn</ExtraParams>
   <PostArgs/>
   <CPUset/>

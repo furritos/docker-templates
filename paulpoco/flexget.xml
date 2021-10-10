@@ -51,7 +51,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8112]/</WebUI>
+  <WebUI>http://[IP]:[PORT:5050]/</WebUI>
   <Banner>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-banner.jpg</Banner>
   <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-icon.png</Icon>
   <ExtraParams>--net=container:binhex-delugevpn</ExtraParams>

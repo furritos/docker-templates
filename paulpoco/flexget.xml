@@ -11,7 +11,7 @@
   <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support>
   <Project>http://flexget.com/</Project>
   <Overview>
-    FlexGet is a multipurpose automation tool for all of your media
+    FlexGet is a multipurpose automation tool for all of your media.  REQUIRES binhex-delugevpn to be installed 1st.  Then follow instructions at Binhex's VPN FAQ Q24.
   </Overview>
   <Category>Downloaders:</Category>
   <WebUI/>

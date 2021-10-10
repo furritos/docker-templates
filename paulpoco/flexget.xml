@@ -3,14 +3,15 @@
   <Name>flexget</Name>
   <Repository>wiserain/flexget:latest</Repository>
   <Registry>https://hub.docker.com/r/wiserain/flexget:latest</Registry>
+  <Requires>binhex-delugevpn</Requires>
   <Network>none</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>true</Privileged>
   <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support>
   <Project>http://flexget.com/</Project>
-  <Overview>&#xD;
-    FlexGet is a multipurpose automation tool for all of your media&#xD;
+  <Overview>
+    FlexGet is a multipurpose automation tool for all of your media
   </Overview>
   <Category>Downloaders:</Category>
   <WebUI/>
@@ -22,8 +23,10 @@
   <DateInstalled></DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>&#xD;
-    FlexGet is a multipurpose automation tool for all of your media&#xD;
+  <Description>
+    FlexGet is a multipurpose automation tool for all of your media
+    REQUIRES binhex-delugevpn to be installed 1st
+    Then follow instructions at Binhex's VPN FAQ Q24
   </Description>
   <Networking>
     <Mode>none</Mode>

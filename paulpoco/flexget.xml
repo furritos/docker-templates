@@ -4,8 +4,11 @@
   <Beta>True</Beta>
   <Category>Downloaders:</Category>
   <Name>flexget</Name>
+  <Requires>binhex-delugevpn</Requires>
   <Description>
     FlexGet is a multipurpose automation tool for all of your media
+    Requires binhex-delugevpn to be installed 1st
+    And do Q24 on the Binhex VPN FAQ
   </Description>
   <Overview>
   </Overview>

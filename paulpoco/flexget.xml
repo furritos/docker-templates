@@ -1,1 +1,76 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/flexget-dev.xml</TemplateURL>
+  <Beta>True</Beta>
+  <Category>Downloaders:</Category>
+  <Date>2021-10-09</Date>
+  <Changes>
+    October 09, 2021 Initial Release
+  </Changes>
+  <Project>http://flexget.com/</Project>
+  <Name>flexget</Name>
+  <Description>
+    FlexGet is a multipurpose automation tool for all of your media
+  </Description>
+  <Overview>
+    - Flexget-webui.  Set FLEXGET_WEBUI_PASSWORD in the section below PGID.
+    - FLEXGET_WEBUI_PASSWORD has to be at least 12 characters.  If left blank it delfaults to flexpass1234.
+    - ContainerDir of /home/nobody/.flexget has to not be changed, it is hard coded in the setup.    
+  </Overview>
+  <Support>
+    http://lime-technology.com/forum/index.php?topic=48629.0
+  </Support>
+  <Registry>
+    https://hub.docker.com/r/wiserain/flexget:latest
+  </Registry>
+  <GitHub>
+    https://github.com/wiserain/docker-flexget
+  </GitHub>
+  <Repository>
+    wiserain/flexget:latest
+  </Repository>
+  <BindTime>true</BindTime>
+  <Privileged>
+    true  
+  </Privileged>
+  <Networking>
+    <Mode>none</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5050</HostPort>
+        <ContainerPort>5050</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/flexget</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Media</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8112]/</WebUI>
+  <Banner>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-banner.jpg</Banner>
+  <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/Deluge-Flexget-icon.png</Icon>
+  <ExtraParams>--net=container:DelugeVPN</ExtraParams>
+</Containers>

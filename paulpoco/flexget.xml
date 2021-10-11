@@ -8,7 +8,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>true</Privileged>
-  <Support>http://lime-technology.com/forum/index.php?topic=48629.0</Support>
+  <Support>https://forums.unraid.net/topic/114713-support-paulpoco-flexget-template/</Support>
   <Project>http://flexget.com/</Project>
   <Overview>
     FlexGet is a multipurpose automation tool for all of your media.  REQUIRES binhex-delugevpn to be installed 1st.  Then follow instructions at Binhex's VPN FAQ Q24.

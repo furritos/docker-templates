@@ -2,7 +2,7 @@
 <Maintainer>
   <Icon>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/images/pjbwidgets_web_hi_res_512.png</Icon>
   <Profile>
-    Trying my best to adapt Binhex's DelugeVPN and add Flexget to it
+    Just adapting existing DockerHub images and doing the Templates for Unraid
   </Profile>
   <DonateText>If you appreciate my work, then please consider buying me a beer :D  LTC address is ltc1q53cfg7xw2kwmcd0z5sgezz9pdtm8nyma64a90c </DonateText>
 </Maintainer>

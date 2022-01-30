@@ -3,8 +3,10 @@
   <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/signum-node.xml</TemplateURL>
   <Beta>True</Beta>
   <Category>Crypto Currency:</Category>
-  <Date>2021-10-06</Date>
-  <Changes>October 6, 2021 Signum-node for Unraid
+  <Date>2022-01-30</Date>
+  <Changes>
+    October  6, 2021 Signum-node for Unraid
+    January 30, 2022 Remove port 8121         
   </Changes>
   <Project>https://github.com/signum-network/signum-node/</Project>
   <Name>signum-node</Name>

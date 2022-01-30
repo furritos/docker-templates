@@ -31,11 +31,6 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8121</HostPort>
-        <ContainerPort>8121</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
         <HostPort>8123</HostPort>
         <ContainerPort>8123</ContainerPort>
         <Protocol>tcp</Protocol>

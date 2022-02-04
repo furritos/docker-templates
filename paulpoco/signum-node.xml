@@ -60,5 +60,5 @@
   <WebUI>http://[IP]:[PORT:8125]</WebUI>
   <Banner></Banner>
   <Icon>https://raw.githubusercontent.com/signum-network/signum-node/main/resources/images/signum_overlay_logo.ico</Icon>
-  <ExtraParams></ExtraParams>
+  <ExtraParams>--init</ExtraParams>
 </Containers>

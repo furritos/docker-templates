@@ -3,12 +3,13 @@
   <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/signum-node.xml</TemplateURL>
   <Beta>True</Beta>
   <Category>Crypto Currency:</Category>
-  <Date>2022-02-19</Date>
+  <Date>2022-02-20</Date>
   <Changes>
     October  6, 2021 Signum-node for Unraid
     January 30, 2022 Remove port 8121
     January 31, 2022 Fix registry url
-    Feb 19, 2022 Add testnet settings
+    Feb 19, 2022 Add testnet setting
+    Feb 20, 2022 change 8123 to 7123
   </Changes>
   <Project>https://github.com/signum-network/signum-node/</Project>
   <Name>signum-node-testnet-VPN</Name>
@@ -35,8 +36,8 @@
     <Mode>none</Mode>
     <Publish>
       <Port>
-        <HostPort>8122</HostPort>
-        <ContainerPort>8122</ContainerPort>
+        <HostPort>7123</HostPort>
+        <ContainerPort>7123</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>

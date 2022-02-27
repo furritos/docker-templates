@@ -10,7 +10,7 @@
     January 31, 2022 Fix registry url
     Feb 19, 2022 Add testnet setting
     Feb 20, 2022 change 8123 to 7123
-    Feb 26, 2022 add port 7124
+    Feb 27, 2022 add port 7124
   </Changes>
   <Project>https://github.com/signum-network/signum-node/</Project>
   <Name>signum-node-testnet-VPN</Name>
@@ -68,5 +68,5 @@
   <WebUI>http://[IP]:[PORT:6876]</WebUI>
   <Banner></Banner>
   <Icon>https://raw.githubusercontent.com/signum-network/signum-node/main/resources/images/signum_overlay_logo.ico</Icon>
-  <ExtraParams>--net=container:binhex-delugevpn --init</ExtraParams>
+  <ExtraParams>--memory=2g --net=container:binhex-delugevpn --init</ExtraParams>
 </Containers>

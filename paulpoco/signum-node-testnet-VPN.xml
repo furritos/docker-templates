@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
-  <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/signum-node.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/signum-node-testnet-VPN.xml</TemplateURL>
   <Beta>True</Beta>
   <Category>Crypto Currency:</Category>
   <Date>2022-02-26</Date>
@@ -30,7 +30,7 @@
   <Support>https://github.com/signum-network/signum-node</Support>
   <Registry>https://hub.docker.com/r/signumnetwork/node</Registry>
   <GitHub>https://github.com/signum-network/signum-node</GitHub>
-  <Repository>signumnetwork/node:latest-h2</Repository>
+  <Repository>paulpoco/node:v3.4.0-alpha2</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
@@ -39,10 +39,12 @@
       <Port>
         <HostPort>7123</HostPort>
            <ContainerPort>7123</ContainerPort>
-        <Protocol>tcp</Protocol>
-           <HostPort>7124</HostPort>
+        <Protocol>tcp</Protocol> 
+      </Port>
+      <Port>
+        <HostPort>7124</HostPort>
         <ContainerPort>7124</ContainerPort>
-        <Protocol>tcp</Protocol>     
+        <Protocol>tcp</Protocol>
       </Port>
       <Port>
         <HostPort>6876</HostPort>

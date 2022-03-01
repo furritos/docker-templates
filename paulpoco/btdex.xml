@@ -31,7 +31,7 @@
       </Port>
       <Port>
         <HostPort>5901</HostPort>
-        <ContainerPort>5901</ContainerPort>
+        <ContainerPort>5900</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>

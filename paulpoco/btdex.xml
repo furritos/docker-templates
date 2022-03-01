@@ -2,19 +2,23 @@
 <Containers>
   <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/btdex.xml</TemplateURL>
   <Beta>True</Beta>
-  <Category>Crypto Currency:</Category>
+  <Category>Crypto Currency</Category>
   <Date>2022-02-28</Date>
   <Changes>
-    Feb 28, 2022 Intial
+    [center][font size=4]Plex Media Server Change Log[/font][/center]
+    
+    [font size=3]2022.03.01[/font]
+    - Fixed grammatical errors
+    - Fixed default values on the volume
+    - Removed optional port 5900
+    
+    [font size=3]2022.02.28[/font]
+    - Initial release
   </Changes>
   <Project>https://btdex.trade/</Project>
   <Name>btdex</Name>
-  <Description>
-    This is a Docker container for BTDEX based on jlesage/docker-baseimage-gui Docker image.
-  </Description>
-  <Overview>
-    This is a Docker container for BTDEX based on jlesage/docker-baseimage-gui Docker image. 
-  </Overview>
+  <Description>This is a Docker container for BTDEX based on jlesage/docker-baseimage-gui Docker image.  </Description>
+  <Overview>This is a Docker container for BTDEX based on jlesage/docker-baseimage-gui Docker image.   </Overview>
   <Support>https://github.com/furritos/docker-btdex</Support>
   <Registry>https://hub.docker.com/r/furritos/docker-btdex:latest</Registry>
   <GitHub>https://github.com/furritos/docker-btdex</GitHub>
@@ -29,26 +33,21 @@
         <ContainerPort>5800</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
-      <Port>
-        <HostPort>5901</HostPort>
-        <ContainerPort>5900</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
     </Publish>
   </Networking>
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/btdex/config</HostDir>
-      <ContainerDir>/opt/btdex/.config</ContainerDir>
+      <ContainerDir>/opt/btdex/.config/btdex</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/Media</HostDir>
+      <HostDir>/mnt/user/appdata/btdex/plots</HostDir>
       <ContainerDir>/opt/btdex/plots</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/btdex/cache</HostDir>
+      <HostDir>/mnt/cache/appdata/btdex/cache</HostDir>
       <ContainerDir>/opt/btdex/cache</ContainerDir>
       <Mode>rw</Mode>
     </Volume>

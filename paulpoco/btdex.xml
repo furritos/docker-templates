@@ -1,29 +1,3 @@
-<?xml version="1.0"?>
-<Container version="2">
-  <Name>btdex</Name>
-  <Repository></Repository>
-  <Registry></Registry>
-  <Network>bridge</Network>
-  <MyIP/>
-  <Shell>sh</Shell>
-  <Privileged>false</Privileged>
-  <Support></Support>
-  <Project></Project>
-  <Overview>
-    
-  </Overview>
-  <Category>Downloaders:</Category>
-  <WebUI/>
-  <TemplateURL></TemplateURL>
-  <Icon></Icon>
-  <ExtraParams></ExtraParams>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled></DateInstalled>
-  <DonateText/>
-  <DonateLink/>
-  <Description>
-    
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
   <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/btdex.xml</TemplateURL>

@@ -30,8 +30,8 @@
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>5900</HostPort>
-        <ContainerPort>5900</ContainerPort>
+        <HostPort>5901</HostPort>
+        <ContainerPort>5901</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>btdex</Name>
+  <Repository></Repository>
+  <Registry></Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project></Project>
+  <Overview>
+    
+  </Overview>
+  <Category>Downloaders:</Category>
+  <WebUI/>
+  <TemplateURL></TemplateURL>
+  <Icon></Icon>
+  <ExtraParams></ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>
+    
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/btdex.xml</TemplateURL>
+  <Beta>True</Beta>
+  <Category>Crypto Currency:</Category>
+  <Date>2022-02-28</Date>
+  <Changes>
+    Feb 28, 2022 Intial
+  </Changes>
+  <Project>https://btdex.trade/</Project>
+  <Name>btdex</Name>
+  <Description>
+    This is a Docker container for BTDEX based on jlesage/docker-baseimage-gui Docker image.
+  </Description>
+  <Overview>
+    This is a Docker container for BTDEX based on jlesage/docker-baseimage-gui Docker image. 
+  </Overview>
+  <Support>https://github.com/furritos/docker-btdex</Support>
+  <Registry>https://hub.docker.com/r/furritos/docker-btdex:latest</Registry>
+  <GitHub>https://github.com/furritos/docker-btdex</GitHub>
+  <Repository>furritos/docker-btdex:latest</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5800</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5900</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/btdex/config</HostDir>
+      <ContainerDir>/opt/btdex/.config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Media</HostDir>
+      <ContainerDir>/opt/btdex/plots</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/btdex/cache</HostDir>
+      <ContainerDir>/opt/btdex/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <Banner></Banner>
+  <Icon>https://github.com/btdex/btdex/blob/f2fe936f08767188df49c448c15fc21ecdc8555d/src/main/resources/icon.png</Icon>
+  <ExtraParams></ExtraParams>
+</Containers> 

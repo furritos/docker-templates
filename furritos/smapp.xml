@@ -28,6 +28,16 @@
         <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+      <Port>
+        <HostPort>7513</HostPort>
+        <ContainerPort>7513</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7513</HostPort>
+        <ContainerPort>7513</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
     </Publish>
   </Networking>
   <Data>
@@ -42,7 +52,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:5801]</WebUI>
+  <WebUI>http://[IP]:[PORT:5801]/vnc.html?autoconnect=true</WebUI>
   <Banner></Banner>
   <Icon>https://github.com/furritos/docker-templates/raw/master/furritos/images/smapp.png</Icon>
   <ExtraParams></ExtraParams>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <TemplateURL>https://github.com/juusujanar/unraid-templates/blob/master/PostgreSQL14.xml</TemplateURL>
+    <TemplateURL>https://github.com/furritos/docker-templates/blob/master/mssql-2017.xml</TemplateURL>
     <Date>2023-10-11</Date>
     <Beta>True</Beta>
     <Category>Network:Management Productivity: Tools:</Category>

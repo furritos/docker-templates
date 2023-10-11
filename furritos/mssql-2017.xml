@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <TemplateURL>https://github.com/furritos/docker-templates/blob/master/mssql-2017.xml</TemplateURL>
+    <TemplateURL>https://github.com/furritos/docker-templates/blob/master/furritos/mssql-2017.xml</TemplateURL>
     <Date>2023-10-11</Date>
     <Beta>True</Beta>
     <Category>Network:Management Productivity: Tools:</Category>
@@ -21,8 +21,8 @@
     <Repository>mcr.microsoft.com/mssql/server:2017-latest</Repository>
     <Support>https://github.com/furritos/docker-templates/issues</Support>    
     <WebUI/>
-    <Banner>https://github.com/furritos/docker-templates/blob/95a64ef84129bc56efa7b5473dbc0f6080cb43c7/furritos/images/sql_server_banner.png</Banner>
-    <Icon>https://github.com/furritos/docker-templates/blob/95a64ef84129bc56efa7b5473dbc0f6080cb43c7/furritos/images/sql_server_512_button.png</Icon>
+    <Banner>https://github.com/furritos/docker-templates/raw/master/furritos/images/sql_server_banner.png</Banner>
+    <Icon>https://github.com/furritos/docker-templates/raw/master/furritos/images/sql_server_512_button.png</Icon>
     <Privileged>false</Privileged>
     <Network>bridge</Network>
     <ExtraParams>--ulimit stack=8192000:8192000</ExtraParams>

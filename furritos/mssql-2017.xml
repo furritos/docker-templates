@@ -4,12 +4,11 @@
     <Date>2023-10-11</Date>
     <Beta>True</Beta>
     <Category>Network:Management Productivity: Tools:</Category>
-    <Name>sqlserver-2017</Name>
-    <Project>https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-deployment?view=sql-server-ver16&amp;pivots=cs1-bash</Project>
+    <Name>sqlserver2017</Name>
+    <Project>https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017</Project>
     <Overview>
         It's MS SQL Server... on Linux... who would have thunk it?!?  Uses Official images for Microsoft SQL Server based on Ubuntu @ https://hub.docker.com/_/microsoft-mssql-server/
-        [br][br]
-
+        [br]
         [b][u][span style='color: #E80000;'][/span][/u][/b][br]
         [b]/mnt/cache/appdata/mssql-2017[/b] This is where MS SQL Server will store it's data. For best performance, keep the files on cache drive.
         [b]Port 1433[/b] Default connection port

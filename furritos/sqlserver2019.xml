@@ -20,7 +20,7 @@
     <Support>https://github.com/furritos/docker-templates/issues</Support>    
     <WebUI/>
     <Banner>https://github.com/furritos/docker-templates/raw/master/furritos/images/sql_server_banner.png</Banner>
-    <Icon>https://github.com/furritos/docker-templates/raw/master/furritos/images/sql_server_512_button.png</Icon>
+    <Icon>https://github.com/furritos/docker-templates/raw/master/furritos/images/sql_server_2019_512_button.png</Icon>
     <Privileged>false</Privileged>
     <Network>bridge</Network>
     <ExtraParams>--ulimit stack=8192000:8192000</ExtraParams>

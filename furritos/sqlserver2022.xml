@@ -7,13 +7,12 @@
     <Name>sqlserver2022</Name>
     <Project>https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-linux-ver15</Project>
     <Overview>
-        It's MS SQL Server... on Linux... who would have thunk it?!?  Uses Official images for Microsoft SQL Server based on Ubuntu @ https://hub.docker.com/_/microsoft-mssql-server/
-        [br]
-        [b][u][span style='color: #E80000;'][/span][/u][/b][br]
-        [b]/mnt/cache/appdata/sqlserver2022[/b] This is where MS SQL Server will store it's data. For best performance, keep the files on cache drive.
-        [b]Port 1433[/b] Default connection port
-        [b]ACCEPT_EULA[/b] End-user License Agreement.  REQUIRED TO SET, otherwise MS SQL Server will NOT START.
-        [b]MSSQL_SA_PASSWORD[/b] Password for the sysadmin. Defaults to sqlserver if not set.
+It's MS SQL Server... on Linux... who would have thunk it?!?  Uses Official images for Microsoft SQL Server based on Ubuntu @ https://hub.docker.com/_/microsoft-mssql-server/
+
+Database Storage Path: SQL Server data storage, defaults to cache drives for best performance.
+TCP Access Port - SQL Server TCP port, defaults to 1433.
+Accept End-User License Agreement - End-user License Agreement, REQUIRED.
+Sysadmin Password - SQL Server Sysadmin (sa) password, defaults to ChangeMe! if not changed.
     </Overview>
     <Registry>https://hub.docker.com/_/microsoft-mssql-server</Registry>
     <Repository>mcr.microsoft.com/mssql/server:2022-latest</Repository>
@@ -24,8 +23,8 @@
     <Privileged>false</Privileged>
     <Network>bridge</Network>
     <ExtraParams>--ulimit stack=8192000:8192000</ExtraParams>
-    <Config Name="Database Storage Path" Target="/var/opt/mssql" Default="/mnt/cache/appdata/sqlserver2022" Mode="rw" Description="MS SQL Server data storage location" Type="Path" Display="always" Required="true" Mask="false"></Config>
-    <Config Name="ACCEPT_EULA" Target="ACCEPT_EULA" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-    <Config Name="MSSQL_SA_PASSWORD" Target="MSSQL_SA_PASSWORD" Default="sqlserver" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true"/>
-    <Config Name="MS SQL Server access port" Target="1433" Default="1433" Mode="tcp" Description="MS SQL Server TCP connection port" Type="Port" Display="always-hide" Required="true" Mask="false">1433</Config>
+    <Config Name="Database Storage Path" Target="/var/opt/mssql" Default="" Mode="rw" Description="MS SQL Server data storage location" Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="TCP Access Port" Target="1433" Default="1433" Mode="tcp" Description="MS SQL Server TCP connection port" Type="Port" Display="always-hide" Required="true" Mask="false">1433</Config>
+    <Config Name="Accept End-User License Agreement" Target="ACCEPT_EULA" Default="" Mode="" Description="EULA (Enter Y to accept)" Type="Variable" Display="always" Required="true" Mask="false" />
+    <Config Name="Sysadmin Password" Target="MSSQL_SA_PASSWORD" Default="ChangeMe!" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true"/>
 </Container>

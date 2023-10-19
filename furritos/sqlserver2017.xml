@@ -2,7 +2,7 @@
 <Container version="2">
     <TemplateURL>https://github.com/furritos/docker-templates/blob/master/furritos/sqlserver2017.xml</TemplateURL>
     <Date>2023-10-11</Date>
-    <Beta>True</Beta>
+    <Beta>False</Beta>
     <Category>Network:Management Productivity: Tools:</Category>
     <Name>sqlserver2017</Name>
     <Project>https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017</Project>

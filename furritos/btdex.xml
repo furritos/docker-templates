@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+    <TemplateURL>https://github.com/furritos/docker-templates/blob/master/furritos/btdex.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Crypto:</Category>
+  <Date>2022-03-08</Date>
+  <Changes>
+    2023.10.20[br]
+    - Migrated from XVNC to KasmVNC
+  </Changes>
+  <Project>https://btdex.trade/</Project>
+  <Name>BTDEX</Name>
+  <Overview>
+BTDEX in a Docker container based on linuxserver.io/KasmVNC Docker image.
+
+What is BTDEX?  It's a unique, serverless, non-custodial exchange method for cryptocurrencies and fiat currencies based on the Signum cryptocurrency.  
+The BTDEX application and the cross-chain/fiat smart contracts are open source. No need to trust your funds to closed source solutions.
+
+BTDEX is open-source software found at https://github.com/btdex/btdex.
+  </Overview>
+  <Support>https://github.com/furritos/docker-btdex/issues</Support>
+  <Registry>https://hub.docker.com/r/furritos/docker-btdex:latest</Registry>
+  <GitHub>https://github.com/furritos/docker-btdex</GitHub>
+  <Repository>furritos/docker-btdex:latest</Repository>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <Banner></Banner>
+  <Icon>https://github.com/furritos/docker-templates/raw/master/furritos/images/btdex.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Name="Configuration Storage Path" Target="/opt/btdex/.config/btdex" Default="" Mode="rw" Description="BTDEX Configuration Path" Type="Path" Display="always" Required="true" Mask="false" />
+  <Config Name="Plot Storage Path" Target="/opt/btdex/plots" Default="" Mode="rw" Description="Signum Plot Path" Type="Path" Display="always" Required="false" Mask="false" />
+  <Config Name="Cache Storage Path" Target="/opt/btdex/cache" Default="" Mode="rw" Description="Signum Cache Path" Type="Path" Display="always" Required="false" Mask="false" />
+  <Config Name="HTTP Port" Target="3000" Default="3000" Mode="tcp" Description="HTTP Port" Type="Port" Display="always-hide" Required="true" Mask="false">3000</Config>
+  <Config Name="HTTPS Port" Target="3001" Default="3001" Mode="tcp" Description="HTTPS Port" Type="Port" Display="always-hide" Required="false" Mask="false" />
+  <Config Name="BTDEX API Port" Target="9000" Default="9000" Mode="tcp" Description="BTDEX API Port" Type="Port" Display="always-hide" Required="false" Mask="false" />
+</Containers>

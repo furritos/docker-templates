@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>go-spacemesh</Name>
+  <TemplateURL>https://github.com/furritos/docker-templates/blob/master/furritos/go-spacemesh.xml</TemplateURL>
+  <Beta>True</Beta>
+  <Category>Crypto:</Category>
+  <Date>2022-10-27</Date>
+  <Changes>
+    2023.10.27[br]
+    - Initial deployment
+  </Changes>
+  <Project>https://spacemesh.io/</Project>
+  <Name>spacemesh</Name>
+  <Overview>
+Docker image of the Spacemesh cryptocurrency built from the code found at https://github.com/spacemeshos/go-spacemesh/.
+
+NOTE: It is HIGHLY RECOMMENDED that a proper configuration is provided and stored in the node-data path below.
+This image provides node-only services.
+  </Overview>
+  <Support>https://github.com/furritos/docker-templates/issues</Support>
+  <Registry>https://hub.docker.com/r/furritos/go-spacemesh</Registry>
+  <GitHub>https://github.com/spacemeshos/go-spacemesh/</GitHub>
+  <Repository>furritos/go-spacemesh:latest</Repository>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <Icon>https://github.com/furritos/docker-templates/raw/master/furritos/images/spacemesh_icon.png</Icon>
+  <Banner></Banner>
+  <ExtraParams></ExtraParams>
+  <Config Name="node-data" Target="/root/spacemesh" Default="/mnt/user/appdata/spacemesh/node" Mode="rw" Description="Node Data Path" Type="Path" Display="always" Required="true" Mask="false" />
+  <Config Name="post-data" Target="/root/post" Default="/mnt/user/appdata/spacemesh/post" Mode="rw" Description="Post Files Path" Type="Path" Display="always" Required="false" Mask="false" />
+  <Config Name="p2p-listener" Target="7513" Default="7513" Mode="tcp" Description="P2P port" Type="Port" Display="always" Required="true" Mask="false" />
+  <Config Name="grpc-public-listener" Target="9092" Default="9092" Mode="tcp" Description="Public GRPC API Port" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="grpc-private-listener" Target="9093" Default="9093" Mode="tcp" Description="Private GRPC API Port" Type="Port" Display="always" Required="false" Mask="false"></Config>
+</Container>

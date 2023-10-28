@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>go-spacemesh</Name>
   <TemplateURL>https://github.com/furritos/docker-templates/blob/master/furritos/go-spacemesh.xml</TemplateURL>
   <Beta>True</Beta>
   <Category>Crypto:</Category>
